@@ -1,0 +1,8 @@
+#! /bin/bash
+
+if [ ! -d /root/.config/canto ]; then
+	mkdir -p /root/.config
+	ln -s /data /root/.config/canto
+fi
+
+exec /usr/bin/canto-daemon -a 0.0.0.0 -p 8000
